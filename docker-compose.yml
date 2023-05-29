@@ -9,7 +9,8 @@ services:
         restart: unless-stopped
         working_dir: /var/www/
         volumes:
-            - ./:/var/www
+            # {route}:/var/www
+            - /home/gabrielbromo/estudos/curso-laravel-10:/var/www
         depends_on:
             - redis
         networks:
