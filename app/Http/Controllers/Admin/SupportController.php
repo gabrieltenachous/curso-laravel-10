@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\DTO\Supports\CreateSupportDTO;
-use App\DTO\Supports\UpdateSupportDTO;
+use App\DTO\Supports\{
+    CreateSupportDTO,
+    UpdateSupportDTO
+};
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateSupportRequest;
 use App\Services\SupportService;
@@ -18,6 +20,7 @@ class SupportController extends Controller
     }
     public function index(Request $request){
         $supports = $this->service->getAll($request->filter);
+        dd($supports);
         return view('admin/supports/index',compact('supports'));
     }
     public function create(){
