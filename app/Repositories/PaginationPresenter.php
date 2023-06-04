@@ -25,7 +25,7 @@ class PaginationPresenter implements PaginationInterface
     {
         return $this->items;
     }
-    public function total(): int{
+    public function total(): int {
         return $this->paginator->total() ?? 0;
     }
     public function isFirstPage(): bool
