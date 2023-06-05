@@ -27,4 +27,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contato',[SiteController::class,'contact']);
